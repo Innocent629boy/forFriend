@@ -27,7 +27,7 @@ tl.to("#two", {
 tl.to("#songplay", { // Animate opacity for visual cue
     duration: 2,
     ease:"power1",
-    opacity: 0,
+    opacity: 1,
    
 });
 tl.to('#play',{
