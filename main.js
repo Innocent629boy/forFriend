@@ -1,7 +1,7 @@
 import "./style.css";
 import gsap from "gsap";
 
-const song = document.querySelector('audio');
+const song = document.querySelector('#audio');
 const tl = gsap.timeline();
 
 tl.to("#loader", {
@@ -28,13 +28,14 @@ tl.to("#songplay", { // Animate opacity for visual cue
     duration: 2,
     ease:"power1",
     opacity: 1,
-    onComplete: () => {
-      song.play(); // Play audio on animation completion
-    }
+   
 });
 tl.to('#play',{
     opacity: 1,
-    duration:0.5
+    duration:0.5, 
+    onComplete: () => {
+      song.play(); // Play audio on animation completion
+    }
 })
 tl.to('#last',{
     opacity: 1,
